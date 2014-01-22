@@ -20,10 +20,26 @@
       <div class="gridster">
         <ul>
           <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-          <div data-id="valuation" data-view="Number" data-title="Current Valuation" data-moreinfo="In billions" data-prefix="$" class="widget widget-number valuation">
-<h1 class="title" data-bind="title">Current Reading</h1>
+          <div data-id="valuation" data-view="Number" data-title="Current Temperature" data-moreinfo="degrees C" data-prefix="" class="widget widget-number valuation" data-suffix="C">
+<h1 class="title" data-bind="title">Temperature</h1>
 
-<h2 class="value" data-bind="current | shortenedNumber | prepend prefix | append suffix">?</h2>
+<h2 class="temp" data-bind="current | shortenedNumber | prepend prefix | append suffix">?</h2>
+
+<p class="change-rate">
+  <i data-bind-class="arrow"></i><span data-bind="difference"></span>
+</p>
+
+<p class="more-info" data-bind="moreinfo"></p>
+
+<p class="updated-at" data-bind="updatedAtMessage"></p>
+
+</div>
+</li>
+          <li data-row="1" data-col="2" data-sizex="1" data-sizey="1">
+          <div data-id="valuation" data-view="Number" data-title="Current Power" data-moreinfo="kW" data-prefix="" class="widget widget-number valuation" data-suffix="kW">
+<h1 class="title" data-bind="title">Power</h1>
+
+<h2 class="power" data-bind="current | shortenedNumber | prepend prefix | append suffix">?</h2>
 
 <p class="change-rate">
   <i data-bind-class="arrow"></i><span data-bind="difference"></span>
